@@ -1,0 +1,137 @@
+.game-content li {
+	box-shadow: 0 0 50px #706565 inset;
+}
+.game-content li {
+	float: left;
+	margin:0px auto;
+	border-radius: 60%;
+	background-color: #000000;
+	box-shadow: 0 0 50px #00ff00 outset;
+}
+.game-content div {
+	width: 40px;
+	height: 70px;
+	border-radius: 40%/50%;
+	opacity: 0;
+}
+
+
+@media screen and (max-width: 2000px) {
+	.container {
+		width: 100%;
+	}
+	.game-content ul {		
+		padding-left:0px;/*消除左侧空白部分*/
+		margin:0px auto;
+		display: table;
+		width:275px;
+	}
+	.game-content li {
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+		margin-bottom: 10px;
+		margin-top:15%;
+		width: 75px;
+		height:45px;
+	}
+	.game-content div {
+		width: 50px;
+		height:70px;
+	}
+}
+
+@-webkit-keyframes mouse-move {
+	50% {
+		margin-top: -30px;
+		opacity: 1;
+	}
+	100% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+}
+@keyframes mouse-move {
+	50% {
+		margin-top: -30px;
+		opacity: 1;
+	}
+	100% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+}
+
+.game-content div.active {
+	-webkit-animation: mouse-move 2s infinite;
+		animation-duration: mouse-move 2s infinite;
+}
+ @keyframes mouse-move {
+	50% {
+		margin-top: -25px;
+		opacity: 1;
+	}
+	100% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+}
+.game-content div.active {
+	animation-duration: mouse-move 2s infinite;
+}
+
+.game-content div.good[clicked="1"]::after {
+	content:url(pia.png);
+	line-height: 100px;
+	font-size: 0px;
+	color: #0ad845;
+}
+.game-content div.bad[clicked="1"]::after {
+	content: "打错啦！-50";
+	line-height: 0px;
+	font-size: 10px;
+	color: #fff000;
+}
+.game-content li:last-child {
+	margin-bottom: 30px;
+}
+
+
+.game-content div.good {
+	background-image: url(tuosai.jpg);
+	width:100%;
+	background-size:100% 100%;
+}
+
+
+.game-content div.bad {
+	background-image: url(xiaolaodi.jpg);
+	width:100%;
+	background-size:100% 100%;
+}
+
+/*九宫格背景的大div*/
+.game-content {
+	overflow: auto;
+	width: 100%;	
+	background:url(grassbg.jpg);
+}
+/*ul的格式，否则有小点*/
+.game-content ul {
+	list-style: none;
+}
+/*上部div布局*/
+.container {
+	width: 100%;
+	height: 300px;
+	margin: 0px auto;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.game-top {
+	padding-top: 0px;
+	width: 100%;
+	height: 140px;
+}
+.game-top p {
+	margin: 5px;
+}
